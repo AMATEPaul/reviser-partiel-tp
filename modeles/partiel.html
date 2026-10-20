@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Modèle de partiel type : remplacer les {{...}}, dupliquer les blocs .question au besoin. -->
+<title>Partiel type {{TPx}} – {{Nom du TP}}</title>
+<style>
+  :root { --encre: #1a1a1a; --gris: #6b6b6b; --trait: #d0d0d0; --fond-titre: #f3f3f3; --rouge: #d40000; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fff; color: var(--encre); font: 15px/1.5 "Segoe UI", Arial, sans-serif; }
+  main { max-width: 820px; margin: 0 auto; padding: 24px 16px 48px; }
+  header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; border-bottom: 2px solid var(--encre); padding-bottom: 10px; margin-bottom: 20px; }
+  h1 { font-size: 22px; margin: 0; }
+  .infos { color: var(--gris); text-align: right; }
+  .consignes { background: var(--fond-titre); padding: 10px 14px; margin-bottom: 20px; }
+  h2 { font-size: 17px; margin: 26px 0 8px; }
+  .question { padding: 8px 0 12px; border-bottom: 1px solid var(--trait); }
+  .question p { margin: 4px 0; }
+  .bareme { float: right; color: var(--gris); font-size: 13px; white-space: nowrap; margin-left: 12px; }
+  .donnees { font-family: Cambria, "Times New Roman", serif; font-size: 16px; }
+  figure { margin: 10px 0; }
+  .encadre { display: inline-block; border: 2px solid var(--rouge); padding: 2px 8px; font-weight: 600; }
+  @media print {
+    body { font-size: 12px; }
+    main { max-width: none; padding: 0; }
+    .question { break-inside: avoid; }
+  }
+  @page { size: A4; margin: 14mm; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Partiel type – {{TPx}} {{Nom du TP}}</h1>
+    <div class="infos">Durée : {{1h15}}<br>Noté sur 20</div>
+  </header>
+
+  <div class="consignes">Documents non autorisés. Toute réponse numérique doit montrer la formule utilisée, l'application numérique et l'unité.</div>
+
+  <h2>Partie 1 – {{titre}} <span class="bareme">({{x}} pts · ~{{y}} min)</span></h2>
+
+  <div class="question">
+    <span class="bareme">{{1,5}} pt</span>
+    <p><strong>1.</strong> {{Énoncé de la question}}</p>
+    <p class="donnees">Données : {{f = 20 Hz ; N<sub>p</sub> = 200 pas/tr}}</p>
+  </div>
+</main>
+</body>
+</html>
